@@ -20,8 +20,9 @@
     </div>
     <br/>
     <form id="uploadForm">
-      <label>Select file to upload:</label>
-      <input type="file" id="fileInput" required>
+      <input type="hidden" id="fileNames" name="fileNames">
+      <label>Select files to upload (max 5):</label>
+      <input type="file" id="fileInput" name="files" multiple accept=".pdf,.jpg,.docx,.png" required>
 
       <label>Document Type:</label>
       <div class="tile-group" id="docTypeGroup">
