@@ -9,8 +9,20 @@ document.querySelectorAll('.tile-group').forEach(group => {
   });
 });
 
+
 window.addEventListener("load", () => {
   document.getElementById("pageLoader").style.display = "none";
+});
+
+document.querySelectorAll('.tile-group').forEach(group => {
+  group.querySelectorAll('.tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      group.querySelectorAll('.tile').forEach(t => t.classList.remove('selected'));
+      tile.classList.add('selected');
+      const inputId = group.id.replace('Group', '');
+      document.getElementById(inputId).value = tile.dataset.value;
+    });
+  });
 });
 
 document.getElementById("uploadForm").addEventListener("submit", function(e) {
@@ -38,12 +50,15 @@ document.getElementById("uploadForm").addEventListener("submit", function(e) {
     })
     .then(response => response.text())
     .then(data => {
-      alert(data);
       document.getElementById("uploadLoader").style.display = "none";
+      alert("✅ Upload successful! Redirecting to review page...");
+      setTimeout(() => {
+        window.location.href = "https://g.page/r/CZtz1WN9piiDEAE/review";
+      }, 2000);
     })
     .catch(error => {
-      alert("Upload failed: " + error);
       document.getElementById("uploadLoader").style.display = "none";
+      alert("❌ Upload failed: " + error);
     });
   };
 

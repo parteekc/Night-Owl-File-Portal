@@ -31,6 +31,12 @@ body {
   color: #555;
 }
 
+.logo-placeholder {
+  max-width: 125px;
+  margin-bottom: 10px;
+  float: left;
+}
+
 label {
   display: block;
   margin-top: 20px;
@@ -59,34 +65,34 @@ textarea {
 .tile {
   flex: 1;
   text-align: center;
-  padding: 20px;
-  border: 2px solid #ccc;
+  padding: 18px;
+  border: 1px solid #ccc;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #f9f9f9;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .tile:hover {
-  border-color: #ffcc00;
+  border-color: #FFCC08;
   box-shadow: 0 0 12px #ffcc00;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .tile.selected {
-  border-color: #000;
-  background-color: #eaeaea;
+  border-color: #000000;
+  background-color: #feffbd;
 }
 
 button {
   margin-top: 25px;
   width: 100%;
   padding: 12px;
-  background-color: #000;
+  background-color: #5fa94b;
   color: #fff;
+  border-radius: 40px;
   border: none;
-  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -118,3 +124,4 @@ button:hover {
   width: 80px;
   height: 80px;
 }
+
