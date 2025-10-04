@@ -125,3 +125,39 @@ button:hover {
   height: 80px;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .tile-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tile {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .branding h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .logo-placeholder {
+    float: none;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .note {
+    font-size: 13px;
+  }
+}
