@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Night Owl Print Upload</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+<div id="pageLoader" class="loader-overlay">
+  <img src="assets/loader.svg" alt="Loading..." />
+</div>
+  <div class="container">
+    <div class="branding">
+      <h1>🦉 Night Owl Kanata</h1>
+      <p>Upload your print job below</p>
+    </div>
+
+    <form id="uploadForm">
+      <label>Select file to upload:</label>
+      <input type="file" id="fileInput" required>
+
+      <label>Document Type:</label>
+      <div class="tile-group" id="docTypeGroup">
+        <div class="tile selected" data-value="General Print">🖨️ General Print</div>
+        <div class="tile" data-value="Student Resume">📄 Student Resume</div>
+      </div>
+      <input type="hidden" id="docType" name="docType" value="General Print">
+
+      <label>Paper Size:</label>
+      <div class="tile-group" id="paperSizeGroup">
+        <div class="tile selected" data-value="Letter">📃 Letter (8.5×11)</div>
+        <div class="tile" data-value="Legal">📜 Legal (8.5×14)</div>
+      </div>
+      <input type="hidden" id="paperSize" name="paperSize" value="Letter">
+
+      <label>Double-Sided Printing?</label>
+      <div class="tile-group" id="doubleSidedGroup">
+        <div class="tile selected" data-value="No">🔒 Single-Sided</div>
+        <div class="tile" data-value="Yes">🔁 Double-Sided</div>
+      </div>
+      <input type="hidden" id="doubleSided" name="doubleSided" value="No">
+
+      <label for="copies">Number of Copies:</label>
+      <input type="number" id="copies" min="1" value="1" required>
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" rows="4" placeholder="Staple pages, print page 2 only, etc."></textarea>
+
+      <button type="submit">Upload to Night Owl</button>
+	  <div id="uploadLoader" class="loader-overlay" style="display: none;">
+  <img src="assets/loader.svg" alt="Uploading..." />
+</div>
+      <div class="note">Black & white prints only. Pricing: 1–5 copies = $1 each, 6+ = $0.75 each, resumes = $0.50.</div>
+    </form>
+  </div>
+
+  <script src="js/upload.js"></script>
+</body>
+</html>
